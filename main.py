@@ -1,13 +1,22 @@
-import math
+Vowels = "aeiou" #put all letters to search for in string without spaces together
 
-def CheckIfNumberIsEven(n):
-    if n/2 == math.floor(n/2):
-        return True
-    else:
-        return False
+def CountVowels(Text):
+    Text = str.lower(Text)
+    ReturnString = ""
+    for Vowel in Vowels:
+        VowelCount = 0
+        for Char in Text:
+            if Char == Vowel:
+                VowelCount += 1
+
+        ReturnString += Vowel+":"+str(VowelCount)+"  "
+
+    return ReturnString
 
 
-a = int(input())
+a = input()
 
-print("Число", a, "є парним:", CheckIfNumberIsEven(a))
+print(CountVowels(a))
+
+
 
