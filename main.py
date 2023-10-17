@@ -1,22 +1,11 @@
-Vowels = "aeiou" #put all letters to search for in string without spaces together
+def GetFactorialOfNumber(n):
+    Number = 1
+    for i in range(1, n+1):
+        Number *= i
 
-def CountVowels(Text):
-    Text = str.lower(Text)
-    ReturnString = ""
-    for Vowel in Vowels:
-        VowelCount = 0
-        for Char in Text:
-            if Char == Vowel:
-                VowelCount += 1
-
-        ReturnString += Vowel+":"+str(VowelCount)+"  "
-
-    return ReturnString
+    return str(Number)
 
 
-a = input()
+a = int(input())
 
-print(CountVowels(a))
-
-
-
+print("The factorial of number", a, "is:", GetFactorialOfNumber(a))
